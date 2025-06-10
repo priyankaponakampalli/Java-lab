@@ -1,0 +1,80 @@
+//looping
+package Lab3;
+import java.util.Scanner;
+public class Looping {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int arr[] = new int[10];
+        System.out.println("Enter the elements : ");
+        for(int i = 0;i<arr.length;i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.println();
+        System.out.println("For Loop: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        System.out.println("While Loop: ");
+        int i = 0;
+        while (i < arr.length) {
+            System.out.print(arr[i]+" ");
+            i++;
+        }
+        System.out.println();
+        System.out.println("Do-While Loop: ");
+        int j = 0;
+        do {
+            System.out.print(arr[j]+" ");
+            j++;
+        } while (j < arr.length);
+        System.out.println();
+        System.out.println("For-Each Loop: ");
+        for (int num : arr) {
+            System.out.print(num+" ");
+        }
+
+        sc.close();
+    }
+}
+//string methods
+package Lab3;
+class String_StringMethods{
+    public static void main(String[] args) {
+        String str = "I am a proud vitian";
+        
+        System.out.println(str.length());
+
+        System.out.println(str.charAt(3));
+
+        String str2 = "Hello World!";
+        System.out.println(str.equals(str2));
+
+        char[] ch = str.toCharArray();
+        System.out.println(ch[9]);
+
+        System.out.println(str.indexOf("proud"));
+
+        System.out.println(str.trim());
+
+        System.out.println(str.substring(13));
+
+        System.out.println(str.substring(7,12));
+
+        System.out.println(str.toLowerCase());
+
+        System.out.println(str.toUpperCase());
+
+        String[] arr = str.split(" ");
+        for (String i : arr){
+            System.out.println(i);
+        }
+
+        System.out.println(str.replace('a','k'));
+
+        System.out.println(str.contains("proud"));
+        System.out.println(str.contains("hello"));
+
+
+    }
+}
