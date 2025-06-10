@@ -1,0 +1,111 @@
+//question 1
+
+package Lab4.Question1;
+
+public class Parent {
+    public void calculate(){
+        System.out.println("Calculating...");
+    }
+}
+package Lab4.Question1;
+
+public class Child extends Parent{
+    int a;
+    int b;
+    public int calculate(int a, int b){
+        return a/b;
+    }
+}
+
+package Lab4.Question1;
+
+public class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.calculate();
+        float x = c.calculate(9,4);
+        System.out.println("Value of the method child calculate Child :"+x);
+    }
+}
+//calculator
+package Lab4;
+
+public class Calculator {
+    public int calculate(int a,int b){
+        return a+b;
+    }
+    public float calculate(float a, float b){
+        return a-b;
+    }
+    public int calculate(int a, int b, char op){
+        if(op == '*'){
+            return a*b;
+        }else{
+            return -1;
+        }
+    }
+    public double calculate(double  a, double b){
+        return a/b;
+    }
+    public static void main(String[] args){
+        Calculator c = new Calculator();
+        int add = c.calculate(5, 6);
+        float sub = c.calculate(6, 4);
+        int mul = c.calculate(4, 2);
+        double div = c.calculate(3, 4, '*');
+
+        System.out.println("Addition :"+add);
+        System.out.println("Subtraction :"+sub);
+        System.out.println("Multiplication :"+mul);
+        System.out.println("Division :"+div);
+
+    }
+
+}
+//calculator 3
+package Lab4;
+
+public class Calculator3 {
+    int a;
+    int b;
+    String op;
+    Calculator3(){
+        this.a = 0;
+        this.b = 0;
+        this.op = null;
+        System.out.println("a value : "+a+"\nb value : "+b+"\nop value : "+op);
+    }
+    Calculator3(int a,int b){
+        this.a = a; 
+        this.b = b;
+        System.out.println(a+b);
+    }
+    Calculator3(int a, int b, String op){
+        this.a = a; 
+        this.b = b;
+        this.op = op;
+        if(op.equals("+")){
+            System.out.println("Addition:"+(a+b));
+        }else if(op.equals("-")){
+            System.out.println("Subtraction:"+(a-b));
+        }
+        else if(op.equals("*")){
+            System.out.println("Multiplication :"+(a*b));
+        }
+        else if(op.equals("/")){
+            System.out.println("Division :"+(a/b));
+        }else{
+            System.out.println("Error");
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Constructor 1:");
+        Calculator3 c1 = new Calculator3();
+        System.out.println();
+        System.out.println("Constructor 2:");
+        Calculator3 c2 = new Calculator3(5, 9);
+        System.out.println();
+        System.out.println("Constructor 3:");
+        Calculator3 c3 = new Calculator3(6, 2, "*");
+    }
+}
