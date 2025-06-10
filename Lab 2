@@ -1,0 +1,135 @@
+//count 
+package Lab2;
+class count {
+    public static void main(String[] args) {
+        String str = "hello HH @& 123";
+        String s = str.toLowerCase();
+        int vcount = 0;
+        int scount = 0;
+        int ncount = 0;
+        int ccount = 0;
+        for(int i = 0;i<s.length()-1;i++){
+            if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u'){
+                vcount++;
+            }else if(s.charAt(i) <= '9' && s.charAt(i) >= '0'){
+                ncount++;
+            }else if(s.charAt(i) == '@' || s.charAt(i) == '*' || s.charAt(i) == '&' || s.charAt(i)=='^' || s.charAt(i) == '%' || s.charAt(i) == '$' || s.charAt(i) == '#'){
+                scount++;
+            }else{
+                ccount++;
+            }
+    }
+    System.out.println("Vowels :"+ vcount);
+    System.out.println("Special Characters :"+ scount);
+    System.out.println("Consonants :"+ ccount);
+    System.out.println("Numbers :"+ ncount);
+    }
+    
+}
+
+//equals
+package Lab2;
+
+public class equals {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = "World";
+        String str1 = s1.toLowerCase();
+        String str2 = s2.toLowerCase();
+        if(str1.equals(str2)){
+            System.out.println("Both are Equal");
+        }else{
+            System.out.println("Not Equal");
+        }
+    }
+}
+//occur
+package Lab2;
+
+public class occur {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        char s1 = 'o';
+
+        System.out.println("First Occurance : " + str.indexOf(s1));
+        System.out.println("Last Occurance : " + str.lastIndexOf(s1));
+    }
+}
+//palindrome
+package Lab2;
+
+import java.util.*;
+public class palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the String : ");
+        String str = sc.next();
+        String str1 = str.toLowerCase();
+        String rev = "";
+        for(int i = str1.length()-1; i>=0;i--){
+            rev = rev + str1.charAt(i);
+        }
+        if(str.equals(rev)){
+            System.out.println("yes it is palindrome");
+        }else{
+            System.out.println("no it is not palindrome");
+        }
+        sc.close();
+    }
+}
+//password
+package Lab2;
+
+public class password {
+    public static void main(String[] args) {
+        String name = "Priyanka";
+        int rollno = 7359;
+
+        String s1 = name.substring(0,4);
+        String s2 = String.valueOf(rollno);
+        String s21 = s2.substring(2,4);
+        String pass = s1+s21;
+        System.out.println("Password : "+pass);
+    }
+}
+//reversestring
+package Lab2;
+
+public class reversestring {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        String rev = "";
+        for(int i = str.length()-1;i>=0;i--){
+            rev += str.charAt(i);
+        }
+        System.out.println(rev);
+    }
+}
+//split
+package Lab2;
+
+public class split {
+    public static void main(String[] args) {
+        String str = "Hello World Java How Are You?";
+        String[] s1 = str.split(" ");
+
+        for(int i = 0;i<s1.length;i++){
+            System.out.println(s1[i]);
+        }
+    }
+}
+//string
+package Lab2;
+
+public class string {
+    public static void main(String[] args) {
+        String str = "Hello World How Are You?";
+        String s1 = "Hello";
+        boolean h1 = str.startsWith(s1);
+        boolean h2 = str.endsWith(s1);
+        System.out.println("Starts with? "+h1);
+        System.out.println("Ends with? "+h2);
+    }
+}
+
+
