@@ -1,13 +1,10 @@
 //question 1
 
-package Lab4.Question1;
-
 public class Parent {
     public void calculate(){
         System.out.println("Calculating...");
     }
 }
-package Lab4.Question1;
 
 public class Child extends Parent{
     int a;
@@ -16,8 +13,6 @@ public class Child extends Parent{
         return a/b;
     }
 }
-
-package Lab4.Question1;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +23,7 @@ public class Main {
     }
 }
 //calculator
-package Lab4;
+
 
 public class Calculator {
     public int calculate(int a,int b){
@@ -63,7 +58,7 @@ public class Calculator {
 
 }
 //calculator 3
-package Lab4;
+
 
 public class Calculator3 {
     int a;
