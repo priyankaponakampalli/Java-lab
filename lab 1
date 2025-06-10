@@ -1,3 +1,4 @@
+//factorial 
 package Lab1;
 import java.util.*;
 public class factorial {
@@ -11,6 +12,102 @@ public class factorial {
         }
         System.out.print("Factorial : ");
         System.out.println(fact);
+        sc.close();
+    }
+}
+
+//palindrome
+package Lab1;
+import java.util.*;
+public class palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the String : ");
+        String str = sc.next();
+        String str1 = str.toLowerCase();
+        String rev = "";
+        for(int i = str1.length()-1; i>=0;i--){
+            rev = rev + str1.charAt(i);
+        }
+        if(str.equals(rev)){
+            System.out.println("yes it is palindrome");
+        }else{
+            System.out.println("no it is not palindrome");
+        }
+        sc.close();
+    }
+}
+
+//reverse
+package Lab1;
+
+import java.util.*;
+public class reverse{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number: ");
+        int num = sc.nextInt();
+        int rev = 0;
+        while(num != 0){
+            int rem = num % 10;
+            rev = rev *10 +rem;
+            num = num/10;
+        }
+        System.out.println("Reverse number : "+rev);
+        sc.close();
+    }
+}
+
+//sort
+package Lab1;
+
+import java.util.*;
+public class sort {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length of array : ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.print("Enter elements of array : ");
+        for(int i = 0; i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        
+        for(int i = 0; i<arr.length-1;i++){
+            for(int j = 0;j<arr.length-i-1;j++){
+                if(arr[j] > arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        System.out.print("Sorted array : ");
+        for(int i = 0;i<arr.length;i++){
+            System.out.print(arr[i]+ " ");
+        }
+        sc.close();
+    }
+}
+
+//vowels
+package Lab1;
+
+import java.util.*;
+public class vowels {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the String : ");
+        String s = sc.next();
+        String str = s.toLowerCase();
+        int count = 0;
+        for(int i = 0; i<str.length();i++){
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u'){
+                count++;
+            }
+        }
+        System.out.print("Count of the vowels in the string : ");
+        System.out.println(count);
         sc.close();
     }
 }
