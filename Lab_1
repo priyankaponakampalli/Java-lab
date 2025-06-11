@@ -1,5 +1,4 @@
 //factorial 
-package Lab1;
 import java.util.*;
 public class factorial {
     public static void main(String[] args) {
@@ -17,7 +16,6 @@ public class factorial {
 }
 
 //palindrome
-package Lab1;
 import java.util.*;
 public class palindrome {
     public static void main(String[] args) {
@@ -39,7 +37,6 @@ public class palindrome {
 }
 
 //reverse
-package Lab1;
 
 import java.util.*;
 public class reverse{
@@ -59,7 +56,6 @@ public class reverse{
 }
 
 //sort
-package Lab1;
 
 import java.util.*;
 public class sort {
@@ -91,7 +87,7 @@ public class sort {
 }
 
 //vowels
-package Lab1;
+
 
 import java.util.*;
 public class vowels {
